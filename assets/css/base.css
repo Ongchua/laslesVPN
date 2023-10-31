@@ -23,9 +23,8 @@ ul li a {
 /* Navbar */
 .nav-item {
     cursor: pointer;
-    line-height: auto;
 }
-.nav-item:hover {
+.item-hover:hover {
     color: var(--primary-color);
 }
 .btn {
@@ -45,6 +44,10 @@ ul li a {
 .btn-primary {
     color: var(--primary-color);
     outline: 1px solid var(--primary-color);
+}
+.btn-primary:hover {
+    color: var(--white-color);
+    background-color: var(--primary-color);
 }
 
 /* Statistics */
@@ -286,7 +289,7 @@ ul li a {
     background-color: rgba(0, 0, 0, 0.4);
 }
 .modal__body {
-    background: #dfc3c3;
+    background: #d3c9c9;
     z-index: 1;
     border-radius: 10px;
     position: absolute;
@@ -338,6 +341,7 @@ ul li a {
 .form .message a {
   color: var(--primary-color);
   text-decoration: none;
+  cursor: pointer;
 }
 .form .register-form {
   display: none;

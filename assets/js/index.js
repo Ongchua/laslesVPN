@@ -32,16 +32,16 @@ $(document).ready(function(){
     });
     var owl = $('.owl-carousel');
     owl.owlCarousel();
-    // Go to the next item
+
     $('.arrow-right').click(function() {
         owl.trigger('next.owl.carousel');
     })
-    // Go to the previous item
+
     $('.arrow-left').click(function() {
-        // With optional speed parameter
-        // Parameters has to be in square bracket '[]'
+ 
         owl.trigger('prev.owl.carousel');
     })
+
     $(".dot").click(function() {
         owl.trigger('to.owl.carousel', [$(this).index(), 300])
     })
@@ -60,33 +60,20 @@ $(document).ready(function(){
     })
 
     $(".btn-sign, .btn-up").click(function() {
-        $(".modal").toggleClass("modal-active");
+        $(".modal").addClass("modal-active");
+    });
+    $(".btn-mobile").click(function() {
+        $(".modal").addClass("modal-active");
     });
     $(".modal__overlay").click(function() {
         $(".modal").removeClass("modal-active");
     });
-    $(".btn-mobile").click(function() {
-        $(".modal").toggleClass("modal-active");
-    });
-
-
-
-
-
-
-
 
     // Modal
-    $('.message a').click(function() {
+    $('.message').click(function() {
         $('form').animate({height: "toggle", opacity: "toggle"}, "slow");
     });
 
-
-    // $('.login-form button').click(function() {
-    //     if( $('.login-form input')=='') {
-    //        $('.input-account').addClass('tabs.tabs-active') 
-    //     } else $('.wait').addClass('tabs.tabs-active') 
-    // })
    
 });
   
